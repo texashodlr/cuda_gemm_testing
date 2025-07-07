@@ -5,7 +5,7 @@ cmake-build-release/
 
 # VSCode, but include settings.json
 .vscode/*
-
+.vs/*
 
 # binaries
 cuBLAS_sgemm
