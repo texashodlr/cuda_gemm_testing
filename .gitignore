@@ -13,3 +13,11 @@ simplest
 
 # benchmark results
 benchmark_results/
+
+# Other
+build
+.vs
+.clangd
+test
+settings.json
+launch.json
