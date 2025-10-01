@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # For single kernel runs
-kernel_num=$1
+kernel_num=1
 file_name="test_kernel_${kernel_num}.txt"
 ./sgemm ${kernel_num} | tee ./test/${file_name}
 

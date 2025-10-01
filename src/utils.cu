@@ -122,6 +122,7 @@ void test_mysgemm_v1(int M, int N, int K, float alpha, float *A, float *B, float
     mysgemm_v1<<<gridDim, blockDim>>>(M, N, K, alpha, A, B, beta, C);
 }
 
+/*
 void test_mysgemm_v2(int M, int N, int K, float alpha, float *A, float *B, float beta, float *C) {
     dim3 blockDim(1024);
     dim3 gridDim(CEIL_DIV(M, 32), CEIL_DIV(N, 32));
@@ -163,7 +164,7 @@ void test_mysgemm_v7(int M, int N, int K, float alpha, float *A, float *B, float
     dim3 gridDim(CEIL_DIV(M, 128), CEIL_DIV(N, 128));
     mysgemm_v7<128, 128, 8, 8, 8><<<gridDim, blockDim>>>(M, N, K, alpha, A, B, beta, C);
 }
-
+*/
 
 
 void test_kernel(int kernel_num, int M, int N, int K, float alpha, float *A, float *B, float beta, float *C,
@@ -175,6 +176,7 @@ void test_kernel(int kernel_num, int M, int N, int K, float alpha, float *A, flo
         case 1:
             test_mysgemm_v1(M, N, K, alpha, A, B, beta, C);
             break;
+        /*
         case 2:
             test_mysgemm_v2(M, N, K, alpha, A, B, beta, C);
             break;
@@ -193,6 +195,7 @@ void test_kernel(int kernel_num, int M, int N, int K, float alpha, float *A, flo
         case 7:
             test_mysgemm_v7(M, N, K, alpha, A, B, beta, C);
             break;
+        */
         default:
             break;
     }
