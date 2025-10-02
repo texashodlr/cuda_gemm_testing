@@ -10,3 +10,7 @@ Practice, learning and performance testing CUDA GEMM Kernels on various Nvidia G
 4. Run `run.sh` to calculate the computational efficiency of each kernel function and save the results in the `test/` directory.
 5. Computational efficiency line plot: `python[3] plot.py 0 1` plots a comparison chart of the computational efficiency of CUBLAS and `kernel_1`.
 
+## Additional Reading
+1. https://docs.nvidia.com/deeplearning/performance/dl-performance-gpu-background/index.html
+2. https://docs.nvidia.com/deeplearning/performance/dl-performance-matrix-multiplication/index.html
+3. https://siboehm.com/articles/22/CUDA-MMM

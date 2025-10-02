@@ -44,5 +44,16 @@ Inner product notes:
     
     Writes: C[gy,gx] = α·tmp + β·C[gy,gx]
 
+Determining Arithmetic Intensity:
+    For each i, each thread does:
+        2 Global Loads one from A and one from B
+        1 FMA --> Very memory bound: lots of global traffic per flop
+        No shared memory tiling every thread independently reloads the same A/B values that nearby threads also need,
+        So each block cooperatively loads a tile of A (Mtile x Ktile) and B (Ktile and Ntile)
+
+RTX A4000 -> 192 Tensor Cores, time to vary M, N and K
+     - Looking at suggested 256x128 and 128x256 tile sizing -> 32768 elements
+
+
 
 */

@@ -40,11 +40,13 @@ int main(int argc, char **argv) {
 
     // Matrix size
 
-    int size_len = 24;
+    int size_len = 16;
     int SIZE[size_len];
-    for (int i = 0; i < size_len; i++)
+    printf("Constructing SIZE Array\n")
+    for (int i = 0; i < size_len; i++){
         SIZE[i] = 256 * (i + 1);
-    
+        printf("Iter. i = %d, Element = %d\n", i, (256*(i+1)));
+    }
 
     int m, n, k, max_size;
     max_size = SIZE[size_len - 1];
